@@ -1,0 +1,169 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f4f7f8;
+  color: #333;
+}
+
+a {
+  color: #0a75ad;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #095c86;
+  text-decoration: underline;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #0a75ad, #00b4d8);
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #f4f7f8;
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  opacity: 0.95;
+}
+
+header nav a {
+  margin: 0 20px;
+  color: #fff;
+  font-weight: bold;
+  border: 2px solid #fff;
+  padding: 8px 16px;
+  border-radius: 50px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+header nav a:hover {
+  background: #fff;
+  color: #0a75ad;
+}
+
+/* Sections */
+section {
+  padding: 60px 0;
+}
+
+section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #0a75ad;
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #0a75ad;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+section p, section li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: inside disc;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.skills-grid div {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-grid div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+.skills-grid h3 {
+  margin-bottom: 10px;
+  color: #0a75ad;
+}
+
+/* Footer */
+footer {
+  background: #0a75ad;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 60px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive header text */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.4rem;
+  }
+
+  header p {
+    font-size: 1.1rem;
+  }
+
+  header nav a {
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 10px 20px;
+  }
+}
